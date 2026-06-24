@@ -1,0 +1,19 @@
+:root {
+  /* Brand palette */
+  --brown: #2b160b;
+  --brown-soft: #3b1d03;
+  --orange: #c87508;
+  --orange-deep: #b76406;
+  --cream: #fff4dd;
+  --beige: #f6e6c8;
+  --light: #fff9ed;
+
+  /* Type */
+  --font-display: 'Archivo Black', 'Inter', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Layout */
+  --container: 1440px;
+  --radius-card: 24px;
+  --radius-btn: 8px;
+}

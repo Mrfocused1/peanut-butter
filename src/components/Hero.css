@@ -1,0 +1,321 @@
+.hero {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    'copy   visual'
+    'feats  visual';
+  column-gap: 16px;
+  min-height: calc(100vh - 110px);
+  position: relative;
+}
+
+/* ---- Left: headline / copy / CTAs ---- */
+.hero__copy {
+  grid-area: copy;
+  align-self: center;
+  position: relative;
+  z-index: 5;
+  padding-top: 18px;
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(42px, 5vw, 84px);
+  line-height: 0.94;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: var(--brown);
+  /* Subtle distressed/grunge erosion — small holes punched into the glyphs */
+  -webkit-mask-image: url('../assets/grunge-mask.png');
+  mask-image: url('../assets/grunge-mask.png');
+  -webkit-mask-size: 520px auto;
+  mask-size: 520px auto;
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
+}
+
+/* Keep two words per line on desktop/tablet (matches the reference) */
+.hero__line {
+  display: block;
+  white-space: nowrap;
+}
+
+/* Hand-drawn brush underline (SVG) */
+.hero__rule {
+  display: block;
+  width: clamp(180px, 18vw, 230px);
+  height: auto;
+  margin: 22px 0 24px;
+}
+
+.hero__lead {
+  font-size: clamp(17px, 1.35vw, 22px);
+  line-height: 1.5;
+  max-width: 430px;
+  margin-bottom: 30px;
+}
+
+.hero__lead strong {
+  color: var(--orange);
+  font-weight: 800;
+}
+
+.hero__cta {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.hero__shop-short {
+  display: none;
+}
+
+/* ---- Right: large jar visual ---- */
+.hero__visual {
+  grid-area: visual;
+  align-self: stretch;
+  position: relative;
+  display: flex;
+  align-items: flex-end; /* the jar rests on the baseline, like the reference */
+  justify-content: center;
+}
+
+/*
+ * Size by WIDTH with height:auto and max-width:none so the aspect ratio can
+ * never be broken. (The earlier distortion came from a fixed height fighting a
+ * max-width clamp.) The trimmed asset fills its box, so no dead space.
+ */
+.hero__image {
+  width: min(52vw, 760px);
+  height: auto;
+  max-width: none;
+  margin-bottom: 4px;
+  filter: drop-shadow(0 26px 34px rgba(43, 22, 11, 0.18));
+}
+
+/* Faint leaves drifting through the hero's negative space */
+.hero__decor {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero__leaf {
+  position: absolute;
+  width: 78px;
+  opacity: 0.28;
+}
+
+.hero__leaf--1 {
+  top: 14%;
+  left: 52%;
+  width: 84px;
+  transform: rotate(-24deg);
+  opacity: 0.3;
+}
+
+.hero__leaf--2 {
+  top: 30%;
+  left: 45%;
+  width: 58px;
+  transform: rotate(34deg);
+  opacity: 0.22;
+}
+
+.hero__leaf--3 {
+  top: 7%;
+  left: 62%;
+  width: 50px;
+  transform: rotate(64deg);
+  opacity: 0.26;
+}
+
+/* ---- Bottom-left: feature icons inside the viewport ---- */
+.hero .features {
+  grid-area: feats;
+  align-self: end;
+  margin-top: 0;
+  padding-bottom: 30px;
+}
+
+/* Circular rotating-text stamp */
+.hero__stamp {
+  position: absolute;
+  top: 4%;
+  right: 0;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
+}
+
+.hero__stamp svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__stamp::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid var(--brown);
+  border-radius: 50%;
+  background: rgba(255, 249, 237, 0.72);
+}
+
+.hero__stamp-text {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  fill: var(--brown);
+  text-transform: uppercase;
+}
+
+.hero__stamp-center {
+  position: relative;
+  font-family: var(--font-display);
+  font-size: 20px;
+  line-height: 0.95;
+  text-align: center;
+  color: var(--brown);
+  text-transform: uppercase;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1023px) {
+  .hero {
+    grid-template-columns: 50% 50%;
+    column-gap: 10px;
+    min-height: calc(100vh - 96px);
+  }
+
+  .hero__title {
+    font-size: clamp(40px, 6.6vw, 72px);
+  }
+
+  .hero__image {
+    width: min(54vw, 560px);
+  }
+
+  .hero__stamp {
+    width: 104px;
+    height: 104px;
+  }
+
+  .hero__stamp-center {
+    font-size: 17px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 767px) {
+  .hero {
+    display: block;
+    position: relative;
+    min-height: auto;
+    padding: 12px 0 28px;
+  }
+
+  /* Text on the left; jar overlays top-right (matches the mobile reference) */
+  .hero__copy {
+    width: 53%;
+    position: relative;
+    z-index: 2;
+    padding-top: 6px;
+  }
+
+  .hero__title {
+    font-size: clamp(31px, 10vw, 54px);
+    line-height: 1;
+    letter-spacing: -0.5px;
+    -webkit-mask-size: 360px auto;
+    mask-size: 360px auto;
+  }
+
+  .hero__word {
+    display: block;
+  }
+
+  .hero__rule {
+    width: 128px;
+    margin: 16px 0 18px;
+  }
+
+  .hero__lead {
+    font-size: 17px;
+    max-width: none;
+  }
+
+  .hero__cta {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+    max-width: 300px;
+  }
+
+  .hero__cta .btn {
+    width: 100%;
+  }
+
+  .hero__shop-long {
+    display: none;
+  }
+
+  .hero__shop-short {
+    display: inline;
+  }
+
+  /* Jar absolutely placed top-right, bleeding off the edge, behind the text */
+  .hero__visual {
+    position: absolute;
+    top: 0;
+    right: -2%;
+    width: 60%;
+    margin: 0;
+    z-index: 1;
+    display: block;
+    pointer-events: none;
+  }
+
+  .hero__image {
+    width: 100%;
+    max-width: none;
+    height: auto;
+    margin: 0;
+    filter: drop-shadow(0 16px 22px rgba(43, 22, 11, 0.16));
+  }
+
+  .hero__stamp {
+    display: none;
+  }
+
+  .hero__decor {
+    display: none;
+  }
+
+  .hero .features {
+    align-self: stretch;
+    margin-top: 26px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero__image {
+    max-width: 360px;
+  }
+  .hero__stamp {
+    width: 82px;
+    height: 82px;
+  }
+  .hero__stamp-center {
+    font-size: 15px;
+  }
+}
