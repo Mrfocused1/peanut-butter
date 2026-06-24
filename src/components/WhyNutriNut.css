@@ -19,7 +19,7 @@
 .why__title {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(40px, 11vw, 62px);
+  font-size: clamp(30px, 8vw, 44px);
   line-height: 0.95;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -40,7 +40,7 @@
 }
 
 .why__copy {
-  font-size: clamp(20px, 2vw, 28px);
+  font-size: clamp(16px, 1.6vw, 22px);
   font-weight: 600;
   line-height: 1.35;
   color: var(--brown);
@@ -49,8 +49,8 @@
 
 .why__peanuts {
   width: 100%;
-  max-width: 480px;
-  margin: 26px auto 44px;
+  max-width: none;
+  margin: 26px auto 40px;
   display: block;
   filter: drop-shadow(0 18px 26px rgba(43, 22, 11, 0.16));
 }
@@ -60,17 +60,19 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   border: 1.5px solid rgba(200, 117, 8, 0.3);
-  border-radius: 22px;
+  border-radius: 20px;
   overflow: hidden;
   background: rgba(255, 250, 238, 0.85);
   box-shadow: 0 24px 55px rgba(43, 22, 11, 0.08);
+  max-width: 540px;
+  margin: 0 auto;
 }
 
 .why__head {
   min-width: 0;
-  padding: 18px 10px;
+  padding: 14px 10px;
   font-weight: 800;
-  font-size: clamp(14px, 3.4vw, 24px);
+  font-size: clamp(13px, 2.5vw, 17px);
   letter-spacing: 0.4px;
   text-transform: uppercase;
   text-align: center;
@@ -89,11 +91,11 @@
 .why__cell {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 14px;
+  gap: 10px;
+  padding: 13px 14px;
   min-width: 0;
-  min-height: 76px;
-  font-size: clamp(14px, 3.3vw, 21px);
+  min-height: 58px;
+  font-size: clamp(13px, 2.4vw, 16px);
   font-weight: 600;
   color: var(--brown);
   border-top: 1.5px solid rgba(200, 117, 8, 0.22);
@@ -104,21 +106,21 @@
 }
 
 .why__icon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
   flex-shrink: 0;
 }
 
 .why__check {
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background: #66a63c;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 7px;
+  padding: 6px;
   flex-shrink: 0;
 }
 
@@ -161,15 +163,15 @@
   }
 
   .why__title {
-    font-size: clamp(52px, 4.6vw, 90px);
+    font-size: clamp(36px, 3.4vw, 56px);
     white-space: nowrap;
     -webkit-mask-size: 520px auto;
     mask-size: 520px auto;
   }
 
   .why__rule {
-    width: 250px;
-    margin: 26px 0 26px;
+    width: 230px;
+    margin: 22px 0 24px;
   }
 
   .why__copy {
@@ -178,18 +180,25 @@
   }
 
   .why__peanuts {
-    margin: 36px 0 0;
-    max-width: 460px;
+    margin: 34px 0 0;
+    max-width: 440px;
+  }
+
+  .why__table {
+    max-width: none;
+    margin: 0;
   }
 
   .why__head {
-    padding: 24px 24px;
+    padding: 22px 24px;
+    font-size: 19px;
   }
 
   .why__cell {
-    min-height: 84px;
+    min-height: 80px;
     padding: 18px 30px;
     gap: 18px;
+    font-size: 17px;
   }
 
   .why__icon {

@@ -24,12 +24,6 @@ export default function JustOneIngredient() {
           src={bowl}
           alt="Top-down bowl of smooth peanut butter surrounded by roasted peanuts and a fresh leaf"
         />
-        <div className="ingredient__stamp" aria-hidden="true">
-          <span>JUST</span>
-          <strong>ONE</strong>
-          <span>INGREDIENT</span>
-          <small>PEANUTS</small>
-        </div>
       </div>
     </section>
   )
