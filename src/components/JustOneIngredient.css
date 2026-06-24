@@ -148,7 +148,7 @@
   .ingredient {
     grid-template-columns: 0.9fr 1.1fr;
     gap: 8px;
-    padding: 52px 0 64px;
+    padding: 22px 0 24px;
   }
 
   .ingredient__title {

@@ -1,7 +1,7 @@
 .why {
   position: relative;
   overflow: hidden;
-  padding: 70px 0 90px;
+  padding: 30px 0 48px;
 }
 
 .why__inner {
@@ -50,7 +50,7 @@
 .why__peanuts {
   width: 100%;
   max-width: none;
-  margin: 26px auto 40px;
+  margin: 14px auto 28px;
   display: block;
   filter: drop-shadow(0 18px 26px rgba(43, 22, 11, 0.16));
 }
