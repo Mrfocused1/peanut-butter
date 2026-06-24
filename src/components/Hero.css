@@ -301,14 +301,14 @@
   /* Circular stamp shown in the top-right gap, like desktop */
   .hero__stamp {
     display: flex;
-    width: 78px;
-    height: 78px;
-    top: 2%;
-    right: 12%;
+    width: 100px;
+    height: 100px;
+    top: 1%;
+    right: 26%;
   }
 
   .hero__stamp-center {
-    font-size: 12px;
+    font-size: 15px;
   }
 
   .hero__decor {
