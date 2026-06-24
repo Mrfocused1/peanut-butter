@@ -298,8 +298,17 @@
     margin: 0;
   }
 
+  /* Circular stamp shown in the top-right gap, like desktop */
   .hero__stamp {
-    display: none;
+    display: flex;
+    width: 78px;
+    height: 78px;
+    top: 2%;
+    right: 12%;
+  }
+
+  .hero__stamp-center {
+    font-size: 12px;
   }
 
   .hero__decor {
