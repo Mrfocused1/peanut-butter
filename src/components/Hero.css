@@ -233,11 +233,11 @@
   }
 
   .hero__title {
-    font-size: clamp(32px, 10.5vw, 52px);
+    font-size: clamp(26px, 8.6vw, 42px);
     line-height: 1;
     letter-spacing: -0.5px;
-    -webkit-mask-size: 300px auto;
-    mask-size: 300px auto;
+    -webkit-mask-size: 280px auto;
+    mask-size: 280px auto;
   }
 
   /* One word per line, like the reference */
