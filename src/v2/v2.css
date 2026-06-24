@@ -1,0 +1,89 @@
+/*
+ * Nutri Nut — v2 "Light" edition theme.
+ *
+ * Everything is scoped to .page--light so it overrides the shared brand tokens
+ * and a handful of surfaces without touching the original site. Same palette
+ * family (orange + brown), just brighter: cream/beige give way to white,
+ * borders soften, and the heavy drop shadows are dialled back for an airier
+ * feel. All imagery is the existing brand assets, reused via the same
+ * components.
+ */
+
+.page--light {
+  /* Brighter brand tokens */
+  --beige: #ffffff;
+  --cream: #fffdf8;
+  --light: #ffffff;
+  --orange: #d2820f;
+  --orange-deep: #b86706;
+  --brown: #34200f;
+
+  background:
+    radial-gradient(circle at 82% 10%, #fff7ea 0%, transparent 48%),
+    linear-gradient(180deg, #ffffff 0%, #fffaf2 100%);
+}
+
+/* Buttons: keep the orange punch, lighten the secondary outline */
+.page--light .btn--primary {
+  box-shadow: 0 12px 26px rgba(210, 130, 15, 0.22);
+}
+
+.page--light .btn--secondary {
+  background: #ffffff;
+  border-color: rgba(52, 32, 15, 0.45);
+}
+
+.page--light .btn--secondary:hover {
+  background: #fffaf1;
+}
+
+/* Softer image shadows throughout */
+.page--light .hero__image,
+.page--light .ingredient__bowl,
+.page--light .why__peanuts {
+  filter: drop-shadow(0 18px 26px rgba(43, 22, 11, 0.1));
+}
+
+/* Hero rotating stamp — clean white disc */
+.page--light .hero__stamp::before {
+  background: rgba(255, 255, 255, 0.86);
+}
+
+/* "Just one ingredient" stamp (where present) */
+.page--light .ingredient__stamp {
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(43, 22, 11, 0.06);
+}
+
+/* Comparison table — white surface, lighter rules */
+.page--light .why__table {
+  background: #ffffff;
+  border-color: rgba(210, 130, 15, 0.22);
+  box-shadow: 0 16px 38px rgba(43, 22, 11, 0.06);
+}
+
+.page--light .why__head--others {
+  background: #faf3e6;
+}
+
+.page--light .why__cell {
+  border-top-color: rgba(210, 130, 15, 0.16);
+}
+
+.page--light .why__cell--others {
+  border-right-color: rgba(210, 130, 15, 0.16);
+}
+
+/* Decorative leaves: a touch fainter on the brighter ground */
+.page--light .why__leaf,
+.page--light .hero__leaf {
+  opacity: 0.16;
+}
+
+/* Mobile feature card → clean white panel */
+@media (max-width: 767px) {
+  .page--light .hero .features {
+    background: #ffffff;
+    box-shadow: 0 14px 34px rgba(43, 22, 11, 0.06);
+  }
+}
