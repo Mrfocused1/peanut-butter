@@ -226,23 +226,23 @@
 
   /* Text on the left; jar overlays top-right (matches the mobile reference) */
   .hero__copy {
-    width: 58%;
+    width: 66%;
     position: relative;
     z-index: 2;
     padding-top: 6px;
   }
 
   .hero__title {
-    font-size: clamp(26px, 8.6vw, 42px);
-    line-height: 1;
+    font-size: clamp(24px, 7.2vw, 38px);
+    line-height: 1.03;
     letter-spacing: -0.5px;
     -webkit-mask-size: 280px auto;
     mask-size: 280px auto;
   }
 
-  /* One word per line, like the reference */
+  /* Two words per line: "REAL PEANUTS." / "NOTHING ELSE." */
   .hero__word {
-    display: block;
+    display: inline;
   }
 
   .hero__rule {
